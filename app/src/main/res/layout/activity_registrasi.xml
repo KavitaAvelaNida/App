@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:background="@color/oren"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Registrasi">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Registrasi"
+        android:textSize="20dp"
+        android:textColor="@color/pth"
+        android:gravity="center"
+        android:layout_marginTop="40dp"/>
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="20dp"
+        android:hint="email"
+        android:textColorHint="@color/pth"
+        app:backgroundTint="@color/pth" />
+
+    <EditText
+        android:id="@+id/nama"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp"
+        android:hint="nama lengkap"
+        android:textColorHint="@color/pth"
+        app:backgroundTint="@color/pth" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textColorHint="@color/pth"
+        app:backgroundTint="@color/pth" />
+
+    <EditText
+        android:id="@+id/nohp"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:hint="Phone Number"
+        android:inputType="number"
+        android:textColorHint="@color/pth"
+        app:backgroundTint="@color/pth" />
+
+    <EditText
+        android:id="@+id/noktp"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:hint="Nomer KTP"
+        android:inputType="number"
+        android:textColorHint="@color/pth"
+        app:backgroundTint="@color/pth" />
+
+    <EditText
+        android:id="@+id/alamat"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:hint="Alamat"
+        android:textColorHint="@color/pth"
+        app:backgroundTint="@color/pth" />
+
+    <Button
+        android:id="@+id/btnregister"
+        android:layout_width="320dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_gravity="center"
+        android:background="@color/colorPrimary"
+        android:text="Register"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/tvlogin"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Already registered ? Sign in"
+        android:textSize="15dp"
+        android:textColor="@color/pth"
+        android:gravity="center"
+        android:layout_marginTop="40dp"/>
+
+</LinearLayout>

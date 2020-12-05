@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name = "cloneprjocetpts_kavita12rpl11"
