@@ -2,9 +2,11 @@ package com.example.cloneprjocetpts_kavita12rpl11;
 
 public class ModelMaster {
     String id;
-    String KodeSepeda;
-    String Merk;
-    String Warna;
+    String kodesepeda;
+    String merk;
+    String warna;
+    String hargasewa;
+    String jenis;
 
     public String getId() {
         return id;
@@ -14,47 +16,45 @@ public class ModelMaster {
         this.id = id;
     }
 
-    public String getKodeSepeda() {
-        return KodeSepeda;
+    public String getKodesepeda() {
+        return kodesepeda;
     }
 
-    public void setKodeSepeda(String kodeSepeda) {
-        KodeSepeda = kodeSepeda;
+    public void setKodesepeda(String kodesepeda) {
+        this.kodesepeda = kodesepeda;
     }
 
     public String getMerk() {
-        return Merk;
+        return merk;
     }
 
     public void setMerk(String merk) {
-        Merk = merk;
+        this.merk = merk;
     }
 
     public String getWarna() {
-        return Warna;
+        return warna;
     }
 
     public void setWarna(String warna) {
-        Warna = warna;
+        this.warna = warna;
     }
 
-    public String getHargaSewa() {
-        return HargaSewa;
+    public String getHargasewa() {
+        return hargasewa;
     }
 
-    public void setHargaSewa(String hargaSewa) {
-        HargaSewa = hargaSewa;
+    public void setHargasewa(String hargasewa) {
+        this.hargasewa = hargasewa;
     }
 
     public String getJenis() {
-        return Jenis;
+        return jenis;
     }
 
     public void setJenis(String jenis) {
-        Jenis = jenis;
+        this.jenis = jenis;
     }
 
-    String HargaSewa;
-    String Jenis;
 
 }

@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:name=".initial"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -12,8 +13,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ListDataCustomerActivity"></activity>
+        <activity android:name=".HomeActivity"></activity>
         <activity android:name=".EditSepeda" />
+        <activity android:name=".Registrasi" />
+        <activity android:name=".ListData" />
+        <activity android:name=".ListSepeda">
+
+        </activity>
         <activity android:name=".MainMenu" />
         <activity android:name=".EditCustomer" />
         <activity android:name=".AddDataBarang" />

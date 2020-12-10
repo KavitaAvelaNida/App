@@ -15,7 +15,7 @@ import com.androidnetworking.common.Priority;
 import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.JSONObjectRequestListener;
 
-import org.json.JSONException;
+
 import org.json.JSONObject;
 
 import java.util.HashMap;
@@ -28,7 +28,6 @@ public class EditCustomer extends AppCompatActivity {
     EditText txtalamat;
     EditText txtnoktp;
     Button btnedit;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,10 +66,10 @@ public class EditCustomer extends AppCompatActivity {
                 body.put("email",textemail.getText().toString());
                 body.put("alamat",txtalamat.getText().toString());
 
-                AndroidNetworking.post(BaseURL.url + "updatebarang.php")
+                AndroidNetworking.post(BaseURL.url+"update.php")
                         .addBodyParameter(body)
                         .setPriority(Priority.MEDIUM)
-                        .setOkHttpClient(((com.example.rentalspd.initial) getApplication()).getOkHttpClient())
+                        .setOkHttpClient(((initial) getApplication()).getOkHttpClient())
                         .build()
                         .getAsJSONObject(new JSONObjectRequestListener() {
                             @Override
@@ -81,11 +80,11 @@ public class EditCustomer extends AppCompatActivity {
                                 Toast.makeText(EditCustomer.this, message, Toast.LENGTH_LONG).show();
                                 Log.d("AS", "onResponse: "+message);
                                 if (message.equalsIgnoreCase("success")) {
-                                    Toast.makeText(EditCustomer.this,"Update berhasil",Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(EditCustomer.this,"Update Customer berhasil",Toast.LENGTH_SHORT).show();
                                     finish();
                                 }
                                 else {
-                                    Toast.makeText(EditCustomer.this,"Update gagal",Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(EditCustomer.this,"Update Customer gagal",Toast.LENGTH_SHORT).show();
                                 }
                             }
 

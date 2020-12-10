@@ -20,13 +20,12 @@
 
     <EditText
         android:layout_gravity="center"
-        android:inputType="textEmailAddress"
-        android:id="@+id/edemail"
+        android:id="@+id/merk"
         android:layout_width="match_parent"
         android:layout_marginTop="20dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
-        android:hint="Email"
+        android:hint="Merk"
         android:padding="15dp"
         android:textColorHint="@color/pth"
         app:backgroundTint="@color/pth" />
@@ -36,8 +35,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
-        android:hint="Nama"
-        android:id="@+id/ednama"
+        android:hint="Kode Sepeda"
+        android:id="@+id/kode"
         android:padding="15dp"
         android:layout_marginTop="20dp"
         android:textColorHint="@color/pth"
@@ -48,9 +47,22 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
-        android:hint="No Hp"
+        android:hint="Warna"
+
+        android:id="@+id/warna"
+        android:padding="15dp"
+        android:layout_marginTop="20dp"
+        android:textColorHint="@color/pth"
+        app:backgroundTint="@color/pth" />
+
+    <EditText
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:hint="Harga Sewa"
         android:inputType="number"
-        android:id="@+id/ednohp"
+        android:id="@+id/hargasewa"
         android:padding="15dp"
         android:layout_marginTop="20dp"
         android:textColorHint="@color/pth"
@@ -61,21 +73,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
-        android:hint="Alamat"
-        android:id="@+id/edalamat"
-        android:padding="15dp"
-        android:layout_marginTop="20dp"
-        android:textColorHint="@color/pth"
-        app:backgroundTint="@color/pth" />
-
-    <EditText
-        android:layout_gravity="center"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
-        android:hint="No Ktp"
-        android:inputType="number"
-        android:id="@+id/ednoktp"
+        android:hint="Jenis"
+        android:id="@+id/jenis"
         android:padding="15dp"
         android:layout_marginTop="20dp"
         android:textColorHint="@color/pth"
@@ -83,13 +82,13 @@
 
     <Button
         android:layout_gravity="center"
-        android:id="@+id/btn_edit"
+        android:id="@+id/btn_editspd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:textColorHint="#fff"
         android:layout_marginHorizontal="20dp"
-        android:hint="EDIT CUSTOMER"
+        android:hint="EDIT SEPEDA"
         android:background="@color/colorPrimary"/>
 
 </LinearLayout>

@@ -1,4 +1,4 @@
-package com.example.rentalspd;
+package com.example.cloneprjocetpts_kavita12rpl11;
 
 import android.app.Application;
 

@@ -33,9 +33,9 @@ public class ListSepeda extends AppCompatActivity implements SwipeRefreshLayout.
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_list_data);
-        recyclerView = (RecyclerView) findViewById(R.id.list);
-       // refreshLayout = findViewById(R.id.swipeRefresh);
+        setContentView(R.layout.activity_list_sepeda);
+        recyclerView = (RecyclerView) findViewById(R.id.list_item);
+        refreshLayout = findViewById(R.id.swipeRefresh);
         refreshLayout.setOnRefreshListener(this);
         refreshLayout.post(new Runnable() {
             @Override
@@ -47,7 +47,7 @@ public class ListSepeda extends AppCompatActivity implements SwipeRefreshLayout.
 
     private void getDataFromRemote() {
         refreshLayout.setRefreshing(true);
-        AndroidNetworking.post(BaseURL.url+"getCustomerAll.php")
+        AndroidNetworking.post(BaseURL.url+"getSepeda.php")
                 .setTag("test")
                 .setPriority(Priority.LOW)
                 .build()
@@ -70,10 +70,10 @@ public class ListSepeda extends AppCompatActivity implements SwipeRefreshLayout.
                                 ModelMaster item = new ModelMaster();
 
                                 item.setId(jsonObject.optString("id"));
-                                item.setKodeSepeda(jsonObject.optString("kodesepeda"));
+                                item.setKodesepeda(jsonObject.optString("kodesepeda"));
                                 item.setMerk(jsonObject.optString("merk"));
                                 item.setWarna(jsonObject.optString("warna"));
-                                item.setHargaSewa(jsonObject.optString("hargasewa"));
+                                item.setHargasewa(jsonObject.optString("hargasewa"));
                                 item.setJenis(jsonObject.optString("jenis"));
                                 rentalArraylist.add(item);
                             }

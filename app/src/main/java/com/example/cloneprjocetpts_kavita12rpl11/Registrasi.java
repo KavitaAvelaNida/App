@@ -1,7 +1,9 @@
 package com.example.cloneprjocetpts_kavita12rpl11;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -29,10 +31,16 @@ public class Registrasi extends AppCompatActivity {
     Button btnregister;
     TextView tvlogin;
 
+    ProgressDialog progressDialog;
+    SharedPreferences sharedPreferences;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registrasi);
+
         txtemail = (EditText)findViewById(R.id.email);
         txtnamalengkap = (EditText)findViewById(R.id.nama);
         txtpassword = (EditText)findViewById(R.id.password);
@@ -41,8 +49,41 @@ public class Registrasi extends AppCompatActivity {
         txtnoktp = (EditText)findViewById(R.id.noktp);
         btnregister = (Button) findViewById(R.id.btnregister);
         btnregister.setOnClickListener(new View.OnClickListener() {
+
+
             @Override
             public void onClick(View view) {
+                String email = txtemail.getText().toString();
+                String password = txtpassword.getText().toString();
+                String nama = txtnamalengkap.getText().toString();
+                String nohp = txtnohp.getText().toString();
+                String alamat = txtalamat.getText().toString();
+                String noktp = txtnoktp.getText().toString();
+
+                if (email.isEmpty()){
+                    Toast.makeText(Registrasi.this, "Email tidak boleh kosong", Toast.LENGTH_SHORT).show();
+
+                }
+                if (password.isEmpty()){
+                    Toast.makeText(Registrasi.this, "Password tidak boleh kosong", Toast.LENGTH_SHORT).show();
+
+                }
+                if (nama.isEmpty()){
+                    Toast.makeText(Registrasi.this, "Nama tidak boleh kosong", Toast.LENGTH_SHORT).show();
+
+                }
+                if (nohp.isEmpty()){
+                    Toast.makeText(Registrasi.this, "Nohp tidak boleh kosong", Toast.LENGTH_SHORT).show();
+
+                }
+                if (alamat.isEmpty()){
+                    Toast.makeText(Registrasi.this, "Alamat tidak boleh kosong", Toast.LENGTH_SHORT).show();
+
+                }
+                if (noktp.isEmpty()){
+                    Toast.makeText(Registrasi.this, "Noktp tidak boleh kosong", Toast.LENGTH_SHORT).show();
+
+                }
                 AndroidNetworking.post(BaseURL.url+"registrasi.php")
                         .addBodyParameter("noktp", txtnoktp.getText().toString())
                         .addBodyParameter("email", txtemail.getText().toString())
@@ -50,7 +91,6 @@ public class Registrasi extends AppCompatActivity {
                         .addBodyParameter("nama", txtnamalengkap.getText().toString())
                         .addBodyParameter("nohp", txtnoktp.getText().toString())
                         .addBodyParameter("alamat", txtalamat.getText().toString())
-                        .addBodyParameter("roleuser", "2")
                         .setTag("test")
                         .setPriority(Priority.MEDIUM)
                         .build()
@@ -60,14 +100,17 @@ public class Registrasi extends AppCompatActivity {
                                 // do anything with response
                                 try {
                                     JSONObject hasil = response.getJSONObject("hasil");
-                                    Log.d("RBA", "url: " + hasil.toString());
-                                    Boolean respon= hasil.getBoolean("respon");
-                                    if (respon){
-                                        Toast.makeText(Registrasi.this, "Sukses Registrasi", Toast.LENGTH_SHORT).show();
-                                        startActivity(new Intent(getApplicationContext(), MainMenu.class));
+                                    boolean respon = hasil.getBoolean("respon");
+                                    Log.d("STATUS", "onResponse: " + hasil);
+                                    if (respon) {
+                                        sharedPreferences.edit().putString("logged","customer").apply();
+                                        Intent intent = new Intent(Registrasi.this, MainActivity.class);
+                                        startActivity(intent);
                                         finish();
-                                    }else{
-                                        Toast.makeText(Registrasi.this, "Gagal Registrasi", Toast.LENGTH_SHORT).show();
+//                                        progressDialog.dismiss();
+                                    } else {
+                                        Toast.makeText(Registrasi.this, "gagal", Toast.LENGTH_SHORT).show();
+//                                        progressDialog.dismiss();
                                     }
                                 } catch (JSONException e) {
                                     e.printStackTrace();

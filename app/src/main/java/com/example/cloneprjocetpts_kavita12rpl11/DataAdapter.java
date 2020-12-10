@@ -36,9 +36,7 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.RentalViewHold
     @Override
     public RentalViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
-        View view = layoutInflater.inflate(R.layout.list,parent,false);
-//        View view1 = layoutInflater.inflate(R.layout.list,parent,false);
-//        return new
+        View view = layoutInflater.inflate(R.layout.adapterrv,parent,false);
         return new RentalViewHolder(view);
     }
 
@@ -86,12 +84,12 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.RentalViewHold
             super(itemView);
 
 
-            card = (CardView) itemView.findViewById(R.id.cardku);
-            email = (TextView) itemView.findViewById(R.id.email);
-            nama = (TextView) itemView.findViewById(R.id.nama);
-            nohp = (TextView) itemView.findViewById(R.id.nohp);
-            alamat = (TextView) itemView.findViewById(R.id.alamat);
-            noktp = (TextView) itemView.findViewById(R.id.noktp);
+            card = (CardView) itemView.findViewById(R.id.cardk);
+            email = (TextView) itemView.findViewById(R.id.etemail);
+            nama = (TextView) itemView.findViewById(R.id.etnama);
+            nohp = (TextView) itemView.findViewById(R.id.etnohp);
+            alamat = (TextView) itemView.findViewById(R.id.etalamat);
+            noktp = (TextView) itemView.findViewById(R.id.etnoktp);
         }
     }
 }

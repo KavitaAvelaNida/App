@@ -10,6 +10,7 @@ import android.widget.Button;
 
 public class MainMenu extends AppCompatActivity {
 private CardView menu1;
+private CardView menu2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,5 +22,12 @@ private CardView menu1;
                 startActivity(new Intent(getApplicationContext(), ListData.class));
             }
         });
+        menu2 = findViewById(R.id.menu2);
+        menu2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), ListSepeda.class));
+            }
+        });
     }
-}
+    }

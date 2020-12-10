@@ -36,7 +36,7 @@ public class ListData extends AppCompatActivity implements SwipeRefreshLayout.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_data);
-        recyclerView = (RecyclerView) findViewById(R.id.list);
+        recyclerView = (RecyclerView) findViewById(R.id.adapterrv);
         refreshLayout = findViewById(R.id.swipeRefresh);
         refreshLayout.setOnRefreshListener(this);
         refreshLayout.post(new Runnable() {
@@ -73,12 +73,12 @@ public class ListData extends AppCompatActivity implements SwipeRefreshLayout.On
                                 Model item = new Model();
 
                                 item.setId(jsonObject.optString("id"));
-                                item.setRoleuser(jsonObject.optString("roleuser"));
                                 item.setEmail(jsonObject.optString("email"));
                                 item.setNama(jsonObject.optString("nama"));
                                 item.setNoktp(jsonObject.optString("noktp"));
                                 item.setNohp(jsonObject.optString("nohp"));
                                 item.setAlamat(jsonObject.optString("alamat"));
+                                item.setRoleuser(jsonObject.optString("roleuser"));
                                 rentalArraylist.add(item);
                             }
 

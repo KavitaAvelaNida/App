@@ -10,6 +10,7 @@
     card_view:cardElevation="3dp"
     card_view:cardUseCompatPadding="true">
 
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -18,6 +19,7 @@
         <ImageView
             android:layout_marginLeft="10dp"
             android:layout_gravity="center"
+            android:src="@drawable/ic_launcher_foreground"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:background="@drawable/ic_launcher_background"/>
@@ -38,28 +40,28 @@
 
             <TextView
                 android:layout_marginLeft="15dp"
-                android:id="@+id/merk"
+                android:id="@+id/tmerk"
                 android:hint="Merk"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
             <TextView
                 android:layout_marginLeft="15dp"
-                android:id="@+id/warna"
+                android:id="@+id/twarna"
                 android:hint="Warna"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
             <TextView
                 android:layout_marginLeft="15dp"
-                android:id="@+id/hargasewa"
+                android:id="@+id/thargasewa"
                 android:hint="HargaSewa"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
             <TextView
                 android:layout_marginLeft="15dp"
-                android:id="@+id/jenis"
+                android:id="@+id/tjenis"
                 android:hint="Jenis"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />

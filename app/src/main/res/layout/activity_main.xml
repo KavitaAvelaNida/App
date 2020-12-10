@@ -27,7 +27,7 @@
         android:layout_marginTop="40dp"/>
 
     <EditText
-        android:id="@+id/username"
+        android:id="@+id/edtusername"
         android:layout_width="320dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -39,7 +39,7 @@
         app:backgroundTint="@color/pth" />
 
     <EditText
-        android:id="@+id/password"
+        android:id="@+id/edtpassword"
         android:layout_width="320dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
